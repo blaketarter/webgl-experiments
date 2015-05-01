@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -16,4 +17,10 @@ html, body {
 .info-overlay p {
   color: white;
   text-align: left;
+}
+
+#new {
+  background: white;
+  border: none;
+  color: black;
 }

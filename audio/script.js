@@ -84,12 +84,13 @@
     audio.autoplay = false;
 
     // document.body.appendChild(audio);
-
-    context = new AudioContext();
-    analyser = context.createAnalyser();
-    source = context.createMediaElementSource(audio);
-    source.connect(analyser);
-    analyser.connect(context.destination);
+    if (!analyser) {
+      context = new AudioContext();
+      analyser = context.createAnalyser();
+      source = context.createMediaElementSource(audio);
+      source.connect(analyser);
+      analyser.connect(context.destination);
+    }
   }
 
   function newElement(position, elements, scene) {
